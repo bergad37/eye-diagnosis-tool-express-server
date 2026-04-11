@@ -1,11 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 import analyzeRouter from './routes/analyze.route.js';
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://www.artopt.io/'
+  })
+);
 app.use(express.json());
 
 // API prefix

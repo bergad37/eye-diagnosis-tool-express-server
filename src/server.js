@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: 'https://www.artopt.io/'
+    origin: 'https://www.artopt.io'
   })
 );
 app.use(express.json());
